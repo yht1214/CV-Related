@@ -1,74 +1,39 @@
 # Project-List
 
-It is the page that records my projects. If you are interested in my project or have some ideas, you are welcome to make a discussion with me.
+It is the page that records my projects. If you are interested in my project or have some ideas, you are welcome to discuss them with me.
 
-## MGTCF: Multi-Generator Tropical Cyclone Forecasting with Heterogeneous Meteorological Data
+## MHG-Net: Multi-Modal Hybrid Guided Network for Tropical Cyclone Intensity and Inner-core Size Estimation
 
-This work was accepted by AAAI (2023) and the paper will be published in April 2023. [[code]](https://github.com/Zjut-MultimediaPlus/MGTCF)
-
-### Abstract
-
-Accurate forecasting of tropical cyclone (TC) plays a critical role in the prevention and defense of TC disasters. We
-must explore a more accurate method for TC prediction.
-Deep learning methods are increasingly being implemented
-to make TC prediction more accurate. However, most existing methods lack a generic framework for adapting heterogeneous meteorological data
-and do not focus on the importance of the environment.
-Therefore, we propose a **M**ulti-**G**enerator **T**ropical **C**yclone **F**orecasting model (MGTCF),
-a generic, extensible, multi-modal TC prediction model with
-the key modules of Generator Chooser Network (GC-Net)
-and Environment Net (Env-Net). The proposed method can
-utilize heterogeneous meteorologic data efficiently and mine
-environmental factors. In addition, the Multi-generator with
-Generator Chooser Net is proposed to tackle the drawbacks
-of single-generator TC prediction methods: the prediction of
-undesired out-of-distribution samples and the problems stemming from insufficient learning ability.
-To prove the effectiveness of MGTCF, we conduct extensive experiments on the
-China Meteorological Administration Tropical Cyclone Best
-Track Dataset. MGTCF obtains better performance compared with other deep learning methods and outperforms
-the official prediction method of the China Central Meteorological Observatory in most indexes.
-
-## MMSTN: A multi-modal spatial-temporal network for tropical cyclone short-term prediction
-
-This work was accepted by Geophysical Research Letters (2022). [[Code]](https://github.com/Zjut-MultimediaPlus/MMSTN)
-[[Paper]](https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2021GL096898)
+This work was under minor revision in the Journal of Geophysical Research: Atmospheres. [[code]](https://github.com/Zjut-MultimediaPlus/MHG-Net)
 
 ### Abstract
 
-Forecasting the trajectory and intensity of tropical cyclones (TCs) is important in disaster
-mitigation as TC usually causes huge damages. However, it remains a substantial challenge due to the limited
-understanding of TC complexity. Still, TCs have been observed and recorded for several decades, and so can be
-predicted if viewed as a spatial-temporal prediction problem with a huge amount of existing data. We propose
-a novel TC trajectory and intensity short-term prediction method: Multi-Modal Spatial-temporal Networks
-(MMSTN). It not only predicts the TC's central pressure, winds, and the location of its center, but also forecasts
-the TC's varied possible tendencies. Experiments were conducted on the China Meteorological Administration
-Tropical Cyclone Best Track Dataset. Experimental results show that the proposed MMSTN outperformed
-state-of-the-art methods as well as the official prediction method of the China Central Meteorological
-Observatory, in intensity prediction and 6 hr trajectory prediction.
+Tropical Cyclone (TC) is a disastrous weather event that can cause considerable destruction, such as river flooding, mudslides, and other disasters. As a result, the government needs accurate TC estimation methods to formulate appropriate policies. TC structure is
+usually divided into inner-core and outer-core regions, with the Radius of Maximum Winds
+(RMW) and 34-knots Winds (R34) serving as their typical indicators. Given the significant
+importance of inner-core wind radius for TCs, particularly regarding intensity and disaster forecasting, this study proposes a Multi-Modal Hybrid Guided Network (MHG-Net) to
+estimate TC Maximum Sustained Wind speed (MSW) and RMW. The proposed MHGNet, consisting of a CNN Backbone (Share-Net), TC Development Network (Dev-Net), and
+Multi-Modal Hybrid Guided structures (MHG), realize effective fusion of real-time satellite
+data and auxiliary information of TC. We performed experiments on the observation area
+of the Himawari-8/9 satellite, using The International Best Track Archive for Climate Stewardship (IBTrACS) datasets to verify the MHG-Net effectiveness; we obtained low Mean Absolute Error (MAE) in TC MSW and RMW estimation, respectively. Utilizing spatial-temporal and development information about TC at different stages, our
+approach introduces a physical information-guided learning method for TC estimation and
+a new perspective on complex interactions between TC and their development information.
+
+## Phy-CoCo: Physical Constraint-Based Correlation Learning for Tropical Cyclone Intensity and Size Estimation
+
+This work was accepted by ECAI-2024. [[Code]](https://github.com/Zjut-MultimediaPlus/Phy-CoCo)
+[[Paper]](https://ebooks.iospress.nl/doi/10.3233/FAIA240744)
+
+### Abstract
+
+Tropical Cyclone (TC) estimation aims to estimate various attributes of TC in real-time to alleviate and prevent disasters caused by violent TCs. As artificial intelligence technology advances, various deep learning-based multi-task estimation approaches have been proposed. However, most of them only focus on extracting common features of tasks, disregarding potential negative transfer and task interactions between different tasks. This paper is thus motivated to propose a Physical Constraint-based Correlation
+(Phy-CoCo) learning framework from the perspective of Multi-Task Learning (MTL). Specifically, for task-specific feature learning, we introduce Correlation Modeling (CoM) based on Centrally Expanded Pooling (CEP). Furthermore, for cross-task interaction, we propose a Multi-Domain Recurrent Convolution (MDRC) module to incorporate physical constraints into MTL. These physical constraints enable the transformation of different task features by simulating the physical relations among different attributes of TC. Lastly, in combination with a task-shared network that leverages the hybrid fusion of multi-modal data, our MTL framework accurately estimates various
+TC attributes. Extensive experiments conducted on our constructed dataset demonstrate that the proposed Phy-CoCo outperforms previous methods in TC estimation in terms of estimation error, verifying the potential of the physics-incorporated MTL model.
 
 ## Tropical Cyclones Tracking Based on Satellite Cloud Images: Database and Comprehensive Study
 
-This work was accepted by MMM (2021). [[Dataset]](https://github.com/Zjut-MultimediaPlus/TCTSCI)
-[[Paper]](https://link.springer.com/chapter/10.1007/978-3-030-67835-7_2)
+This work was under review at a CCF-A conference (2025). 
 
 ### Abstract
 
-The tropical cyclone is one of disaster weather that cause
-serious damages for human community. It is necessary to forecast the
-tropical cyclone efficiently and accurately for reducing the loss caused by
-tropical cyclones. With the development of computer vision and satellite
-technology, high quality meteorological data can be got and advanced
-technologies have been proposed in visual tracking domain. This makes
-it possible to develop algorithms to do the automatic tropical cyclone
-tracking which plays a critical role in tropical cyclone forecast. In this
-paper, we present a novel database for Typical Cyclone Tracking based
-on Satellite Cloud Image, called TCTSCI. To the best of our knowledge,
-TCTSCI is the first satellite cloud image database of tropical cyclone
-tracking. It consists of 28 video sequences and totally 3,432 frames with
-6001×6001 pixels. It includes tropical cyclones of five different intensities
-distributing in 2019. Each frame is scientifically inspected and labeled
-with the authoritative tropical cyclone data. Besides, to encourage and
-facilitate research of multimodal methods for tropical cyclone tracking,
-TCTSCI provides not only visual bounding box annotations but multimodal meteorological data of tropical cyclones.
-We evaluate 11 state-of-the-art and widely used trackers by using OPE and EAO metrics and
-analyze the challenges on TCTSCI for these trackers.
-
+The objective of Tropical Cyclone (TC) estimation is to estimate various attributes of TC in realtime accurately. However, multiple distribution shifts caused by TC’s polytropic environmental fields, including different geographical conditions and seasonal changes, pose a significant challenge to accurate TC estimation. Since existing deep learning models estimate TC solely from the perspective of multi-modal fusion, they overlook the above challenge, making it difficult to generalize well when confronted with different distributions in TC data. Therefore, this paper introduces an effective Identity Distribution-oriented Physical invariant learning framework (IDPil), which incorporates prior physical knowledge in the form of graphs, dealing with distribution variability with physical invariance. Specifically, the proposed IDPil employs the wind field model and dark correlation knowledge of TC to regulate the distribution of features for intrinsic invariant learning, facilitating the accurate estimation of TC wind speed, pressure, inner-core, and outer-core size. Extensive experiments conducted on multiple datasets and tasks demonstrate the outperformance of the proposed IDPil, verifying that the corporation of prior physics by invariant learning could meet diverse distribution shifts.
